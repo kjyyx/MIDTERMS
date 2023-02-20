@@ -3,8 +3,24 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.sendFile(__dirname + '/' + 'index.html');
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(__dirname + '/' + 'about.html');
+});
+
+app.get('/blog', (req, res) => {
+  res.sendFile(__dirname + '/' + 'blog.html');
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(__dirname + '/' + 'contact.html');
+});
+
+app.get('/upload', (req, res) => {
+  res.sendFile(__dirname + '/' + 'upload.html');
 });
 
 app.all('*', (req, res) => {
