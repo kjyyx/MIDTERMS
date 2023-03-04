@@ -36,8 +36,7 @@ const upload = multer({
     ){
       cb(null,true);
     }else{
-      cb(null,false);
-      cb(new Error("Upload only png, jpg, and jpeg format."))
+      return cb(new Error("Upload only png, jpg, and jpeg format."))
     }
   },
 });
